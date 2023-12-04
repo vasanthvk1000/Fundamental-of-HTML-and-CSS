@@ -1,0 +1,21 @@
+.tr1{
+    background-color: rgb(134, 134, 150) !important;
+}
+#vk{
+    background-color: aquamarine;
+}
+
+.card{
+  background-color: rgb(236, 125, 125);
+  color: beige;
+  text-align: center;
+  width: 500px !important;
+  height: 250px;
+  margin-top: 200px;
+  font-size:50px;
+  padding: 85px;
+  font-weight: 900;
+  text-decoration: dotted;
+  border-color: none !important;
+}
+  
