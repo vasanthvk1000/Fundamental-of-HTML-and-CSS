@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flipkart</title>
+  <link rel="stylesheet" href="flipkartThemes.css">
+  <script src="https://kit.fontawesome.com/13d49d66e6.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+  <!--------MainHeaderNavbar------->
+
+  <nav class="navbar navbar-light sticky-top">
+    <div class="container mt-2" style="flex-wrap: nowrap;">
+      <ul style="list-style-type: none;">
+        <li>
+          <a class="navbar-brand" href="#"><img style="width: 90px;" src="../assets/flipkart.png" class="flipkartpng"
+              alt="" srcset="">
+          </a>
+        </li>
+        <li>
+          <a class="" href="" style="color: #f0f0f0; text-decoration: none;">Explore <span class=""
+              style="color: #ffe500">Plus</span>
+            <img style="width:10px" ; src="../assets/plus.png">
+          </a>
+        </li>
+      </ul>
+      <div class="d-flex" style="margin-right: 450px;">
+        <div class="d-flex">
+          <input type="text" class="p-3 mb-2" placeholder="Serach for products,brands and more" style="width: 500px;"
+          />
+      
+        </div>
+        <input type="text" class="text-center" style="padding-top: 4px;
+        
+            padding-bottom: 4px;
+            height: 42px;
+            margin-top: 9px;
+            margin-left: 30px;" placeholder="Login"/>
+        <ul style="list-style-type: none;
+              color: white;
+              margin-left: 15px;" class="d-flex fw-bold">
+          <li class="my-3"><a href="#" style="color: white; text-decoration: none;">Seller</a></li>
+          <select id="cars" name="cars" class="fw-bold " style="border: none; background-color: #2874f0; 
+                color: white; margin-left: 100px !important;">
+            <option value="volvo" class="">More</option>
+            <option value="saab">Saab 95</option>
+            <option value="mercedes">Mercedes SLK</option>
+            <option value="audi">Audi TT</option>
+          </select>
+          <div style="margin-left: 45px;" class="d-flex">
+            <i class="fa-solid fa-cart-shopping fa-lg" style="margin-top: 30px;"></i>
+            <a href="#" class="text-white"
+              style="text-decoration: none;margin-top: 13px; font-weight: bold; margin-left: 10px; font-size: larger;">Cart</a>
+          </div>
+        </ul>
+      </div>
+      <div>
+
+      </div>
+
+
+    </div>
+  </nav>
+
+  <!---------SubHeadNavbar-------------------->
+  <nav class="navbar subNavber navbar-light bg-white py-3">
+    <div class="container-fluid" style="margin-left: 120px;
+          margin-right: 120px;">
+      <select id="cars" name="cars" style="border: none;">
+        <option value="volvo">Electronics</option>
+        <option value="saab">Saab 95</option>
+        <option value="mercedes">Mercedes SLK</option>
+        <option value="audi">Audi TT</option>
+      </select>
+      <select id="cars" name="cars" style="border: none;">
+        <option value="volvo">TVs and Appliance</option>
+        <option value="saab">Saab 95</option>
+        <option value="mercedes">Mercedes SLK</option>
+        <option value="audi">Audi TT</option>
+      </select>
+      <select id="cars" name="cars" style="border: none;">
+        <option value="volvo">Men</option>
+        <option value="saab">Saab 95</option>
+        <option value="mercedes">Mercedes SLK</option>
+        <option value="audi">Audi TT</option>
+      </select>
+      <select id="cars" name="cars" style="border: none;">
+        <option value="volvo">Women</option>
+        <option value="saab">Saab 95</option>
+        <option value="mercedes">Mercedes SLK</option>
+        <option value="audi">Audi TT</option>
+      </select>
+      <select id="cars" name="cars" style="border: none;">
+        <option value="volvo">Baby&kids</option>
+        <option value="saab">Saab 95</option>
+        <option value="mercedes">Mercedes SLK</option>
+        <option value="audi">Audi TT</option>
+      </select>
+      <select id="cars" name="cars" style="border: none;">
+        <option value="volvo">Home&Furniture</option>
+        <option value="saab">Saab 95</option>
+        <option value="mercedes">Mercedes SLK</option>
+        <option value="audi">Audi TT</option>
+      </select>
+      <select id="cars" name="cars" style="border: none;">
+        <option value="volvo">Sports,Books and More</option>
+        <option value="saab">Saab 95</option>
+        <option value="mercedes">Mercedes SLK</option>
+        <option value="audi">Audi TT</option>
+      </select>
+      <div><a href="#" style="text-decoration: none; color: #000; font-weight:400;">Flights</a></div>
+      <div><a href="#" style="text-decoration: none; color: #000; font-weight:400;">Offer Zone</a></div>
+    </div>
+  </nav>
+  <div class="" style="background-color: #f0f0f0;">
+    <div class="mx-3">
+      <div class="row">
+        <div class="col-md-2 sidebar mt-2">
+          <!-------sidebar---------->
+  <div class="card">
+ <!--Main Navigation-->
+<header>
+  <!-- Sidebar -->
+  <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+    <div class="position-sticky">
+      <div class="list-group list-group-flush mx-3 mt-4">
+        <a
+          href="#"
+          class="list-group-item list-group-item-action py-2 ripple"
+          aria-current="true"
+        >
+          <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Main dashboard</span>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action py-2 ripple active">
+          <i class="fas fa-chart-area fa-fw me-3"></i><span>Webiste traffic</span>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action py-2 ripple"
+          ><i class="fas fa-lock fa-fw me-3"></i><span>Password</span></a
+        >
+        <a href="#" class="list-group-item list-group-item-action py-2 ripple"
+          ><i class="fas fa-chart-line fa-fw me-3"></i><span>Analytics</span></a
+        >
+        <a href="#" class="list-group-item list-group-item-action py-2 ripple">
+          <i class="fas fa-chart-pie fa-fw me-3"></i><span>SEO</span>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action py-2 ripple"
+          ><i class="fas fa-chart-bar fa-fw me-3"></i><span>Orders</span></a
+        >
+        <a href="#" class="list-group-item list-group-item-action py-2 ripple"
+          ><i class="fas fa-globe fa-fw me-3"></i><span>International</span></a
+        >
+        <a href="#" class="list-group-item list-group-item-action py-2 ripple"
+          ><i class="fas fa-building fa-fw me-3"></i><span>Partners</span></a
+        >
+        <a href="#" class="list-group-item list-group-item-action py-2 ripple"
+          ><i class="fas fa-calendar fa-fw me-3"></i><span>Calendar</span></a
+        >
+        <a href="#" class="list-group-item list-group-item-action py-2 ripple"
+          ><i class="fas fa-users fa-fw me-3"></i><span>Users</span></a
+        >
+        <a href="#" class="list-group-item list-group-item-action py-2 ripple"
+          ><i class="fas fa-money-bill fa-fw me-3"></i><span>Sales</span></a
+        >
+      </div>
+    </div>
+  </nav>
+
+
+             
+</header>
+
+  </div>
+      
+        </div>
+        <div class="col-md-10 bodyContent">
+  <div class="card mt-2" style="border: none;">
+ <!-- Gallery -->
+<div class="row p-2">
+  <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+    <img
+      src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Boat on Calm Water"
+    />
+
+    <img
+      src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Wintry Mountain Landscape"
+    />
+  </div>
+
+  <div class="col-lg-4 mb-4 mb-lg-0">
+    <img
+      src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Mountains in the Clouds"
+    />
+
+    <img
+      src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Boat on Calm Water"
+    />
+  </div>
+
+  <div class="col-lg-4 mb-4 mb-lg-0">
+    <img
+      src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Waves at Sea"
+    />
+
+    <img
+      src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Yosemite National Park"
+    />
+  </div>
+</div>
+<!-- Gallery -->
+  </div>
+        </div>
+      </div>
+    </div></div>
+  
+
+</body>
+
+</html>

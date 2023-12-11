@@ -1,6 +1,9 @@
 .flex{
   display: flex;
 }
+body{
+  font-size: 40px;
+}
 
 .flex> div {
   background-color: DodgerBlue;
