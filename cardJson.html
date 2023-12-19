@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <style>
+        body{
+            margin-top:20px;
+            background:#DCDCDC;
+        }
+        .thumb-sm {
+            height: 36px;
+            width: 36px;
+        }
+        .card-box {
+            padding: 20px;
+            border-radius: 3px;
+            margin-bottom: 30px;
+            background-color: #fff;
+        }
+        .taskList {
+            min-height: 40px;
+            margin-bottom: 0
+        }
+
+        .taskList li {
+            background-color: #fff;
+            border: 1px solid rgba(121, 121, 121, .2);
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 3px
+        }
+
+        .taskList li:last-of-type {
+            margin-bottom: 0
+        }
+
+        .taskList a {
+            font-size: 13px
+        }
+
+        .taskList .checkbox {
+            margin-left: 20px;
+            margin-top: 5px
+        }
+        .text-muted {
+            color: #98a6ad!important;
+        }
+    </style>
+    <script>
+
+        function loadContent()
+        {
+    let tasks = {"data":[{"title":"Upcoming", "des":"Your awesome text goes here. Your awesome text goes here.", 
+"data":[{"title":"When an unknown printer took a galley of type and scrambled it to make a type specimen book.", 
+"name":"Petey Cruiser", "profile":"https://bootdey.com/img/Content/avatar/avatar1.png", "is_completed": false},
+{"title":"Many desktop publishing packages and web page editors now use Lorem.", "name":"Anna Sthesia",
+ "profile":"https://bootdey.com/img/Content/avatar/avatar2.png", "is_completed": false},
+{"title":"If you are going to use a passage of Lorem Ipsum..", "name":"Gail Forcewind", 
+"profile":"https://bootdey.com/img/Content/avatar/avatar3.png", "is_completed": true},
+{"title":"It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.", 
+"name":"Maya Didas", "profile":"https://bootdey.com/img/Content/avatar/avatar4.png", "is_completed": false},
+{"title":"There are many variations of passages of Lorem Ipsum available.", "name":"Rick O'Shea", 
+"profile":"https://bootdey.com/img/Content/avatar/avatar5.png", "is_completed": false}]},
+
+
+{"title":"In Progress", "des":"Your awesome text goes here.The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.",
+ "data":[{"title":"If you are going to use a passage of Lorem Ipsum..", 
+ "name": "Gail Forcewind","profile":"https://bootdey.com/img/Content/avatar/avatar3.png", "is_completed": false},
+ {"title":"It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.", 
+ "name":"Maya Didas", "profile":"https://bootdey.com/img/Content/avatar/avatar4.png", "is_completed": false},
+ {"title":"There are many variations of passages of Lorem Ipsum available.", "name":"Rick O'Shea", 
+ "profile":"https://bootdey.com/img/Content/avatar/avatar5.png", "is_completed": false},
+ {"title":"When an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  "name":"Petey Cruiser", "profile":"https://bootdey.com/img/Content/avatar/avatar1.png", "is_completed": false}]},
+
+
+  {"title":"Completed", "des":"Your awesome text goes here. Your awesome text goes here.", 
+  "data":[{"title":"When an unknown printer took a galley of type and scrambled it to make a type specimen book.", 
+  "name":"Petey Cruiser", "profile":"https://bootdey.com/img/Content/avatar/avatar1.png", "is_completed": false},
+  {"title":"Many desktop publishing packages and web page editors now use Lorem.", "name":"Anna Sthesia", 
+  "profile":"https://bootdey.com/img/Content/avatar/avatar2.png", "is_completed": false},
+  {"title":"If you are going to use a passage of Lorem Ipsum..", "name":"Gail Forcewind", 
+  "profile":"https://bootdey.com/img/Content/avatar/avatar3.png", "is_completed": true},
+  {"title":"It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+  "name":"Maya Didas", "profile":"https://bootdey.com/img/Content/avatar/avatar4.png", "is_completed": false},
+  {"title":"There are many variations of passages of Lorem Ipsum available.", "name":"Rick O'Shea", 
+  "profile":"https://bootdey.com/img/Content/avatar/avatar5.png", "is_completed": false}]}]}
+        }
+
+        
+        let htmlContent = "";
+        tasks.data.forEach((task,index) => {
+htmlContent = htmlContent +  `<h4 class="text-dark header-title">`+task.data.+`</h4>`
+
+            });
+       
+    </script>
+</head>
+
+<body>
+    
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card-box">
+                    <p class="text-muted m-b-30 font-13">Your awesome text goes here. Your awesome text goes here.</p>
+                    <ul class="sortable-list taskList list-unstyled ui-sortable" id="upcoming">
+                        <li class="task-warning ui-sortable-handle" id="task1">
+                            <div class="checkbox checkbox-custom checkbox-single float-right">
+                                <input type="checkbox" aria-label="Single checkbox Two">
+                                <label></label>
+                            </div>When an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            <div class="clearfix"></div>
+                            <div class="mt-3">
+                                <p class="float-right mb-0 mt-2">
+                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light">View</button>
+                                </p>
+                                <p class="mb-0">
+                                    <a href="" class="text-muted"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="task-user" class="thumb-sm rounded-circle mr-2"> <span class="font-bold font-secondary">Petey Cruiser</span></a>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="task-success ui-sortable-handle" id="task2">
+                            <div class="checkbox checkbox-custom checkbox-single float-right">
+                                <input type="checkbox" aria-label="Single checkbox Two">
+                                <label></label>
+                            </div>Many desktop publishing packages and web page editors now use Lorem.
+                            <div class="clearfix"></div>
+                            <div class="mt-3">
+                                <p class="float-right mb-0 mt-2">
+                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light">View</button>
+                                </p>
+                                <p class="mb-0">
+                                    <a href="" class="text-muted"><img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="task-user" class="thumb-sm rounded-circle mr-2"> <span class="font-bold font-secondary">Anna Sthesia</span></a>
+                                </p>
+                            </div>
+                        </li>
+                        <li id="task3" class="ui-sortable-handle">
+                            <div class="checkbox checkbox-custom checkbox-single float-right">
+                                <input type="checkbox" aria-label="Single checkbox Two">
+                                <label></label>
+                            </div>If you are going to use a passage of Lorem Ipsum..
+                            <div class="clearfix"></div>
+                            <div class="mt-3">
+                                <p class="float-right mb-0 mt-2">
+                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light">View</button>
+                                </p>
+                                <p class="mb-0">
+                                    <a href="" class="text-muted"><img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="task-user" class="thumb-sm rounded-circle mr-2"> <span class="font-bold font-secondary">Gail Forcewind</span></a>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="task-info ui-sortable-handle" id="task4">
+                            <div class="checkbox checkbox-custom checkbox-single float-right">
+                                <input type="checkbox" aria-label="Single checkbox Two">
+                                <label></label>
+                            </div>It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                            <div class="clearfix"></div>
+                            <div class="mt-3">
+                                <p class="float-right mb-0 mt-2">
+                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light">View</button>
+                                </p>
+                                <p class="mb-0">
+                                    <a href="" class="text-muted"><img src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="task-user" class="thumb-sm rounded-circle mr-2"> <span class="font-bold font-secondary">Maya Didas</span></a>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="task-danger ui-sortable-handle" id="task5">
+                            <div class="checkbox checkbox-custom checkbox-single float-right">
+                                <input type="checkbox" aria-label="Single checkbox Two">
+                                <label></label>
+                            </div>There are many variations of passages of Lorem Ipsum available.
+                            <div class="clearfix"></div>
+                            <div class="mt-3">
+                                <p class="float-right mb-0 mt-2">
+                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light">View</button>
+                                </p>
+                                <p class="mb-0">
+                                    <a href="" class="text-muted"><img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="task-user" class="thumb-sm rounded-circle mr-2"> <span class="font-bold font-secondary">Rick O'Shea</span></a>
+                                </p>
+                            </div>
+                        </li>
+                    </ul><a href="#" class="btn btn-custom btn-block mt-3 waves-effect waves-light"><i class="fa fa-plus-circle"></i> Add New</a></div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card-box">
+                    <h4 class="text-dark header-title">In Progress</h4>
+                    <p class="text-muted m-b-30 font-13">Your awesome text goes here.The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+                    <ul class="sortable-list taskList list-unstyled ui-sortable" id="inprogress">
+                        <li id="task9" class="ui-sortable-handle">
+                            <div class="checkbox checkbox-custom checkbox-single float-right">
+                                <input type="checkbox" aria-label="Single checkbox Two">
+                                <label></label>
+                            </div>If you are going to use a passage of Lorem Ipsum..
+                            <div class="clearfix"></div>
+                            <div class="mt-3">
+                                <p class="float-right mb-0 mt-2">
+                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light">View</button>
+                                </p>
+                                <p class="mb-0">
+                                    <a href="" class="text-muted"><img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="task-user" class="thumb-sm rounded-circle mr-2"> <span class="font-bold font-secondary">Gail Forcewind</span></a>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="task-info ui-sortable-handle" id="task10">
+                            <div class="checkbox checkbox-custom checkbox-single float-right">
+                                <input type="checkbox" aria-label="Single checkbox Two">
+                                <label></label>
+                            </div>It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                            <div class="clearfix"></div>
+                            <div class="mt-3">
+                                <p class="float-right mb-0 mt-2">
+                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light">View</button>
+                                </p>
+                                <p class="mb-0">
+                                    <a href="" class="text-muted"><img src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="task-user" class="thumb-sm rounded-circle mr-2"> <span class="font-bold font-secondary">Maya Didas</span></a>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="task-danger ui-sortable-handle" id="task11">
+                            <div class="checkbox checkbox-custom checkbox-single float-right">
+                                <input type="checkbox" aria-label="Single checkbox Two">
+                                <label></label>
+                            </div>There are many variations of passages of Lorem Ipsum available.
+                            <div class="clearfix"></div>
+                            <div class="mt-3">
+                                <p class="float-right mb-0 mt-2">
+                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light">View</button>
+                                </p>
+                                <p class="mb-0">
+                                    <a href="" class="text-muted"><img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="task-user" class="thumb-sm rounded-circle mr-2"> <span class="font-bold font-secondary">Rick O'Shea</span></a>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="task-warning ui-sortable-handle" id="task7">
+                            <div class="checkbox checkbox-custom checkbox-single float-right">
+                                <input type="checkbox" aria-label="Single checkbox Two">
+                                <label></label>
+                            </div>When an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            <div class="clearfix"></div>
+                            <div class="mt-3">
+                                <p class="float-right mb-0 mt-2">
+                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light">View</button>
+                                </p>
+                                <p class="mb-0">
+                                    <a href="" class="text-muted"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="task-user" class="thumb-sm rounded-circle mr-2"> <span class="font-bold font-secondary">Petey Cruiser</span></a>
+                                </p>
+                            </div>
+                        </li>
+                    </ul><a href="#" class="btn btn-custom btn-block mt-3 waves-effect waves-light"><i class="fa fa-plus-circle"></i> Add New</a></div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card-box">
+                    <h4 class="text-dark header-title">Completed</h4>
+                    <p class="text-muted m-b-30 font-13">Your awesome text goes here. Your awesome text goes here.</p>
+                    <ul class="sortable-list taskList list-unstyled ui-sortable" id="completed">
+                        <li class="task-warning ui-sortable-handle" id="task14">
+                            <div class="checkbox checkbox-custom checkbox-single float-right">
+                                <input type="checkbox" aria-label="Single checkbox Two">
+                                <label></label>
+                            </div>When an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            <div class="clearfix"></div>
+                            <div class="mt-3">
+                                <p class="float-right mb-0 mt-2">
+                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light">View</button>
+                                </p>
+                                <p class="mb-0">
+                                    <a href="" class="text-muted"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="task-user" class="thumb-sm rounded-circle mr-2"> <span class="font-bold font-secondary">Petey Cruiser</span></a>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="task-success ui-sortable-handle" id="task15">
+                            <div class="checkbox checkbox-custom checkbox-single float-right">
+                                <input type="checkbox" aria-label="Single checkbox Two">
+                                <label></label>
+                            </div>Many desktop publishing packages and web page editors now use Lorem.
+                            <div class="clearfix"></div>
+                            <div class="mt-3">
+                                <p class="float-right mb-0 mt-2">
+                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light">View</button>
+                                </p>
+                                <p class="mb-0">
+                                    <a href="" class="text-muted"><img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="task-user" class="thumb-sm rounded-circle mr-2"> <span class="font-bold font-secondary">Anna Sthesia</span></a>
+                                </p>
+                            </div>
+                        </li>
+                        <li id="task16" class="ui-sortable-handle">
+                            <div class="checkbox checkbox-custom checkbox-single float-right">
+                                <input type="checkbox" aria-label="Single checkbox Two">
+                                <label></label>
+                            </div>If you are going to use a passage of Lorem Ipsum..
+                            <div class="clearfix"></div>
+                            <div class="mt-3">
+                                <p class="float-right mb-0 mt-2">
+                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light">View</button>
+                                </p>
+                                <p class="mb-0">
+                                    <a href="" class="text-muted"><img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="task-user" class="thumb-sm rounded-circle mr-2"> <span class="font-bold font-secondary">Gail Forcewind</span></a>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="task-info ui-sortable-handle" id="task17">
+                            <div class="checkbox checkbox-custom checkbox-single float-right">
+                                <input type="checkbox" aria-label="Single checkbox Two">
+                                <label></label>
+                            </div>It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                            <div class="clearfix"></div>
+                            <div class="mt-3">
+                                <p class="float-right mb-0 mt-2">
+                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light">View</button>
+                                </p>
+                                <p class="mb-0">
+                                    <a href="" class="text-muted"><img src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="task-user" class="thumb-sm rounded-circle mr-2"> <span class="font-bold font-secondary">Maya Didas</span></a>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="task-danger ui-sortable-handle" id="task18">
+                            <div class="checkbox checkbox-custom checkbox-single float-right">
+                                <input type="checkbox" aria-label="Single checkbox Two">
+                                <label></label>
+                            </div>There are many variations of passages of Lorem Ipsum available.
+                            <div class="clearfix"></div>
+                            <div class="mt-3">
+                                <p class="float-right mb-0 mt-2">
+                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light">View</button>
+                                </p>
+                                <p class="mb-0">
+                                    <a href="" class="text-muted"><img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="task-user" class="thumb-sm rounded-circle mr-2"> <span class="font-bold font-secondary">Rick O'Shea</span></a>
+                                </p>
+                            </div>
+                        </li>
+                    </ul><a href="#" class="btn btn-custom btn-block mt-3 waves-effect waves-light"><i class="fa fa-plus-circle"></i> Add New</a></div>
+            </div>
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- container -->
+</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+</script>
+    <script>
+        // let samplejson = {"name" : "vasantha kumar", "age": "23", "genter" : "m"};
+        // alert("Name :" + samplejson.name);
+        // alert("Age :" + samplejson.age);
+        // alert("genter :" + samplejson['genter']);
+      function list(){
+
+          let samplejson ={
+            "data" :[
+            {"name" : "vasantha kumar", "age": "23", "genter" : "m",
+           "phonenumber" : ["3425255257","73238788"]},
+          {"name" : " kumar", "age": "23", "genter" : "m","phonenumber" : ["3425255257","73238788"]},
+          {"name" : "vasantha kumar", "age": "23", "genter" : "m","phonenumber" : ["3425255257","73238788","7767686"]},
+          {"name" : "vasantha kumar", "age": "23", "genter" : "m",   "phonenumber" : ["3425255257","73238788"]}
+        ]} ;
+          let innerHTMLTags = "";
+  
+         for(let index = 0; index < samplejson.data.length; index++){
+            const element = samplejson.data[index];
+          //   alert("Name :" + element.phonenumber) 
+          innerHTMLTags = innerHTMLTags + "<tr><td>" + element.name
+               +"</td><td>" + element.age + "</td><td>" + element.genter
+                  +"</td><td>" + element.phonenumber.join(", ") + "</td></tr>"
+  
+          }
+          document.getElementById("tbody").innerHTML = innerHTMLTags;
+      }
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <button type="button" onclick="list()">Load List items</button>
+        <table class="table table-striped">
+<thead>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Genter</th>
+        <th>phone</th>
+    </tr>
+</thead>
+<tbody id="tbody">
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</tbody>
+        </table>
+    </div>
+    
+</body>
+</html>
